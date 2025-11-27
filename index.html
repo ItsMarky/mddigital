@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-GB"> <head>
+<html lang="en-GB"> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD Digital - Web Design & Aerial Videography</title>
@@ -9,20 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* ----------------------------------
-        1. GLOBAL & MOBILE-FIRST STYLES
-        ----------------------------------
-        */
         
         :root {
-            /* --- Change Your Colors Here --- */
-            --primary-accent: #007bff; /* A bright, professional blue */
+            --primary-accent: #007bff;
             --dark-bg: #121212;
             --dark-bg-secondary: #1e1e1e;
             --light-text: #f4f4f4;
             --secondary-text: #aaaaaa;
-            /* ------------------------------- */
-            
             --nav-height: 70px;
         }
 
@@ -51,7 +45,7 @@
 
         h1 { font-size: 2.5rem; font-weight: 900; }
         h2 { font-size: 2rem; }
-        h3 { font-size: 1.5rem; color: var(--primary-accent); }
+        h3 { font-size: 1.5rem; color: var(--light-text); } 
 
         p {
             margin-bottom: 1rem;
@@ -69,7 +63,6 @@
             text-decoration: none;
         }
 
-        /* Utility Classes */
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -90,7 +83,7 @@
             padding: 0.8rem 1.8rem;
             background: var(--primary-accent);
             color: #fff;
-            border-radius: 50px; /* Pill shape */
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             transition: opacity 0.3s ease;
@@ -105,16 +98,12 @@
             color: var(--dark-bg);
         }
         
-        /* ----------------------------------
-        2. HEADER & NAVIGATION
-        ----------------------------------
-        */
         .main-header {
             position: sticky;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(18, 18, 18, 0.85); /* Semi-transparent */
+            background: rgba(18, 18, 18, 0.85);
             backdrop-filter: blur(10px);
             z-index: 100;
             height: var(--nav-height);
@@ -134,7 +123,6 @@
             color: var(--light-text);
         }
 
-        /* Desktop Nav (Hidden on Mobile) */
         .nav-links {
             display: none;
             list-style: none;
@@ -147,10 +135,9 @@
             font-weight: 700;
         }
         .nav-links a.btn {
-            color: #fff; /* Override btn-secondary text color */
+            color: #fff;
         }
 
-        /* Mobile Hamburger Icon */
         .hamburger {
             display: block;
             cursor: pointer;
@@ -161,22 +148,21 @@
             stroke: var(--light-text);
         }
 
-        /* Mobile Menu Overlay */
         .mobile-nav {
             display: block;
             position: fixed;
             top: 0;
-            left: -100%; /* Off-screen */
+            left: -100%;
             width: 100%;
             height: 100vh;
             background: var(--dark-bg);
             z-index: 99;
             transition: left 0.3s ease-in-out;
-            
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
         
         .mobile-nav.open {
@@ -209,18 +195,15 @@
             stroke: var(--light-text);
         }
 
-        /* ----------------------------------
-        3. HERO SECTION
-        ----------------------------------
-        */
         #hero {
-            /* REPLACE THIS IMAGE URL with your own video/image. */
-            background-image: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.6)), url('https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image: 
+                linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.6)), 
+                url('images/hero.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax effect */
-            
-            height: 90vh; /* 90% of the viewport height */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 90vh; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -228,6 +211,7 @@
             text-align: center;
             padding: 0 1.5rem;
         }
+
 
         #hero h1 {
             color: #fff;
@@ -241,10 +225,6 @@
             margin-bottom: 2rem;
         }
 
-        /* ----------------------------------
-        4. SERVICES SECTION
-        ----------------------------------
-        */
         .services-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -269,20 +249,20 @@
 
         .service-card li {
             color: var(--secondary-text);
-            margin-bottom: 1.5rem; /* More space between items */
+            margin-bottom: 1.5rem;
             display: flex;
-            align-items: flex-start; /* Align icon to the top */
+            align-items: flex-start;
         }
         
         .service-card li:last-child {
-            margin-bottom: 0; /* Remove margin from last item */
+            margin-bottom: 0;
         }
         
         .service-card li svg {
             stroke: var(--primary-accent);
             min-width: 20px;
-            margin-right: 0.75rem; /* More space for icon */
-            margin-top: 0.15rem; /* Nudge icon down to align with text */
+            margin-right: 0.75rem;
+            margin-top: 0.15rem;
         }
 
         .service-card li div {
@@ -294,17 +274,13 @@
         .service-card li strong {
             color: var(--light-text);
             font-weight: 700;
-            margin-bottom: 0.25rem; /* Small space between title and text */
+            margin-bottom: 0.25rem;
         }
         
         .service-card li span {
             color: var(--secondary-text);
         }
 
-        /* ----------------------------------
-        5. PORTFOLIO SECTION
-        ----------------------------------
-        */
         .portfolio-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -315,13 +291,17 @@
             background: var(--dark-bg-secondary);
             border-radius: 8px;
             border: 1px solid #333;
-            overflow: hidden; /* To contain the image */
+            overflow: hidden;
+            cursor: pointer; 
         }
         
         .portfolio-card img {
             border-radius: 8px 8px 0 0;
             display: block;
             transition: transform 0.3s ease;
+            height: 200px; 
+            width: 100%; 
+            object-fit: cover; 
         }
         
         .portfolio-card:hover img {
@@ -347,12 +327,9 @@
         .portfolio-card h3 {
             color: var(--light-text);
             margin: 0;
+            margin-bottom: 0.5rem;
         }
         
-        /* ----------------------------------
-        6. ABOUT SECTION
-        ----------------------------------
-        */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -360,15 +337,11 @@
             align-items: center;
         }
 
-        /* ----------------------------------
-        7. TESTIMONIALS SECTION
-        ----------------------------------
-        */
         .testimonial-card {
             background: var(--dark-bg-secondary);
             padding: 2.5rem 2rem;
-            border-radius: 8px;
             border-left: 5px solid var(--primary-accent);
+            border-radius: 8px;
             max-width: 700px;
             margin: 0 auto;
         }
@@ -386,10 +359,6 @@
             font-style: normal;
         }
 
-        /* ----------------------------------
-        8. CTA SECTION
-        ----------------------------------
-        */
         #cta {
             background: var(--primary-accent);
             text-align: center;
@@ -404,15 +373,13 @@
             max-width: 600px;
             margin: 0 auto 2rem auto;
         }
+        
         #cta .btn {
             background: #fff;
             color: var(--dark-bg);
+            cursor: pointer; 
         }
 
-        /* ----------------------------------
-        9. FOOTER
-        ----------------------------------
-        */
         footer {
             padding: 4rem 0 2rem 0;
             background: var(--dark-bg-secondary);
@@ -460,17 +427,114 @@
             margin-top: 2rem;
         }
         
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 900px;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
         
-        /* ----------------------------------
-        10. DESKTOP STYLES (Media Queries)
-        ----------------------------------
-        */
+        #contact-modal .modal-content {
+            max-width: 500px;
+            padding: 30px;
+            background: var(--dark-bg-secondary);
+            border-radius: 8px;
+        }
+        
+        .modal-content input[type="text"], 
+        .modal-content input[type="email"], 
+        .modal-content input[type="tel"], 
+        .modal-content textarea {
+            width: 100%; 
+            padding: 10px; 
+            border-radius: 4px; 
+            border: 1px solid #555; 
+            background: #333; 
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        .modal-content label {
+            display: block; 
+            margin-bottom: 0.5rem; 
+            color: var(--light-text);
+            font-weight: 700;
+        }
+
+
+        #modal-caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
         
         @media (min-width: 768px) {
             h1 { font-size: 3.5rem; }
             h2 { font-size: 2.5rem; }
 
-            /* Desktop Navigation */
+            #hero {
+                background-image: 
+                    linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.6)), 
+                    url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'), 
+                    url('images/hero.jpg');
+                    
+                background-size: 
+                    cover,
+                    50% 100%,
+                    50% 100%;
+                    
+                background-position: 
+                    center,
+                    left center,
+                    right center;
+            }
+
             .hamburger, .mobile-nav {
                 display: none;
             }
@@ -479,7 +543,6 @@
                 align-items: center;
             }
             
-            /* Grids */
             .services-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -501,6 +564,12 @@
         @media (min-width: 1024px) {
             .portfolio-grid {
                 grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
             }
         }
 
@@ -657,27 +726,30 @@
                 </div>
                 
                 <div class="portfolio-grid">
-                    <a href="#" class="portfolio-card">
-                        <img src="https://via.placeholder.com/600x400.png?text=Carpenter+Website" alt="Project 1">
-                        <div class="portfolio-content">
-                            <span class="portfolio-tag">Web + Aerial</span>
-                            <h3>1</h3>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="portfolio-card">
-                        <img src="https://via.placeholder.com/600x400.png?text=Catering+Co." alt="Project 2">
+                    <a href="#" class="portfolio-card" data-url="https://www.hotchocshots.co.uk">
+                        <img src="images/hotchocshots.png" alt="Web design preview for Hotchocshots">
                         <div class="portfolio-content">
                             <span class="portfolio-tag">Web Design</span>
-                            <h3>2</h3>
+                            <h3>Hot Choc Shots</h3>
+                            <p>A fully responsive website for Hot Choc Shots, letting customers view the menu, order gourmet fudge and hot chocolate sticks, and enjoy a smooth experience on desktop and mobile.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="portfolio-card" data-url="https://www.carlannison.co.uk">
+                        <img src="images/carlannison.png" alt="Web design preview for Carl Annison Paving">
+                        <div class="portfolio-content">
+                            <span class="portfolio-tag">Web Design</span>
+                            <h3>Carl Annison Paving</h3>
+                            <p>A fully responsive website for Carl Annison Paving, showcasing services, project galleries, and contact options. Optimised for desktop and mobile for a smooth browsing experience.</p>
                         </div>
                     </a>
                     
                     <a href="#" class="portfolio-card">
-                        <img src="https.../via.placeholder.com/600x400.png?text=Roof+Inspection" alt="Project 3">
+                        <img src="images/finestfoods.png" alt="Project 3">
                         <div class="portfolio-content">
-                            <span class="portfolio-tag">Aerial Videography</span>
-                            <h3>3</h3>
+                            <span class="portfolio-tag">Web Design</span>
+                            <h3>Finest Foods</h3>
+                            <p>A simple static website showcasing products, prices, and downloadable lists. Customers select items via an ordering form, which is sent directly to the supplier for fulfilment and invoicing, keeping the site fast and straightforward.</p>
                         </div>
                     </a>
                 </div>
@@ -693,18 +765,20 @@
                 
                 <div class="portfolio-grid">
                     <a href="shop.html" class="portfolio-card">
-                        <img src="https://via.placeholder.com/600x400.png?text=Seaside+Print+in+Frame" alt="Seaside print in a frame">
+                        <img src="images/beach.jpg" alt="Seaside print in a frame">
                         <div class="portfolio-content">
                             <span class="portfolio-tag">New in Shop</span>
-                            <h3>Norfolk Coast Print</h3>
+                            <h3>Coastal Colours at Sheringham</h3>
+							<p>A vibrant drone photograph of the iconic beach huts at Sheringham Beach against the rugged Norfolk coastline. Adds coastal character to any room.</p>
                         </div>
                     </a>
                     
                     <a href="shop.html" class="portfolio-card">
-                        <img src="https://via.placeholder.com/600x400.png?text=Cityscape+on+Canvas" alt="Cityscape on canvas">
+                        <img src="images/lakes.jpg" alt="Cityscape on canvas">
                         <div class="portfolio-content">
-                            <span class="portfolio-tag">Best Seller</span>
-                            <h3>Cityscape Canvas</h3>
+                            <span class="portfolio-tag">New in Shop</span>
+                            <h3>Lake District Aerial Print</h3>
+							<p>Keswick and Derwentwater from above, showcasing mountain peaks, the serene lake, and lush valleys. A striking statement piece for any home.</p>
                         </div>
                     </a>
                     
@@ -755,7 +829,7 @@
             <div class="container">
                 <h2>Have a project in mind?</h2>
                 <p>I'm here to help. Whether it's a new website or aerial shots, I'd be happy to talk it through with you.</p>
-                <a href="mailto:info@markdudley.co.uk" class="btn btn-secondary">Let's Talk</a>
+                <a href="#" id="cta-form-btn" class="btn btn-secondary">Let's Talk</a>
             </div>
         </section>
 
@@ -796,23 +870,163 @@
         </div>
     </footer>
 
+    <div id="image-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="modal-caption"></div>
+    </div>
+    
+    <div id="contact-modal" class="modal">
+        <span class="modal-close contact-modal-close">&times;</span> 
+        
+        <div class="modal-content">
+            <h2 id="modal-title" style="color: var(--light-text); text-align: center; margin-top: 0; margin-bottom: 0.5rem;">Let's Discuss Your Project</h2>
+            <p id="modal-subtitle" style="text-align: center; margin-bottom: 2rem;">Fill out the details below, and I'll get back to you within one business day.</p>
+            
+            <form 
+                id="contact-form"
+                action="https://formspree.io/f/xldzlrzq" 
+                method="POST"
+                onsubmit="handleFormSubmit(event)"
+            >
+                <input type="hidden" name="_subject" value="New Project Inquiry from MD Digital" /> 
+                <div style="margin-bottom: 1rem;">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="details">Tell me your vision: What are you hoping to create (e.g., Website, Video, or Both? Target launch date? Budget range?)*</label>
+                    <textarea id="details" name="project_details" rows="5" required placeholder="Example: I need a 5-page site for my charity. I am looking for some Drone Photography of my home."></textarea>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%; border: none;">Send Inquiry</button>
+            </form>
+            <div id="form-success-message" style="display: none; text-align: center; padding: 40px 20px;">
+                <svg style="color: var(--primary-accent); margin-bottom: 1.5rem;" width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 11.08V12C21.43 14.88 19.95 17.51 17.77 19.41C15.59 21.31 12.9 22.39 10 22.5C5.03 22.5 0 17.47 0 12C0 6.53 5.03 1.5 10 1.5C12.9 1.5 15.59 2.58 17.77 4.49" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 4L12 14L8 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h2 style="color: var(--light-text); margin-bottom: 1rem;">Thank You! I have received your inquiry.</h2>
+                <p style="color: var(--secondary-text);">Thanks again for taking the time to write. I personally review every inquiry and promise to send you a thoughtful, personalized reply within one business day.</p>
+            </div>
+        </div>
+    </div>
+
     <script>
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contact-form');
+            const statusDiv = document.getElementById('form-success-message');
+            const formTitle = document.getElementById('modal-title');
+            const formSubtitle = document.getElementById('modal-subtitle');
+
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                form.style.display = 'none';
+                formTitle.style.display = 'none';
+                formSubtitle.style.display = 'none';
+                
+                statusDiv.style.display = 'block';
+
+                setTimeout(() => form.reset(), 500);
+
+            } else {
+                alert('Oops! There was an issue sending your form. Please try again or email me directly.');
+            }
+        }
+        
+        // --- Modal & Navigation Logic ---
+        
+        const contactModal = document.getElementById('contact-modal');
+        const imageModal = document.getElementById("image-modal");
+        const ctaBtn = document.getElementById('cta-form-btn');
+        const cards = document.querySelectorAll('.portfolio-card');
+        const modalImg = document.getElementById("modal-image");
+        const captionText = document.getElementById("modal-caption");
+        
+        // Modal Closer Utility
+        function closeModal(modalElement) {
+            modalElement.style.display = "none";
+        }
+        
+        // Open/Close Handlers
+        function setupModalListeners(modalElement, openTrigger) {
+            
+            // Close when 'x' is clicked
+            modalElement.querySelector('.modal-close').onclick = () => closeModal(modalElement);
+
+            // Close when user clicks outside the modal
+            modalElement.onclick = (e) => {
+                if (e.target === modalElement) {
+                    closeModal(modalElement);
+                }
+            };
+            
+            // If an open trigger is provided (e.g., CTA button or Portfolio card)
+            if (openTrigger) {
+                openTrigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Reset contact modal state if it's the contact button
+                    if (modalElement === contactModal) {
+                        document.getElementById('contact-form').style.display = 'block';
+                        document.getElementById('modal-title').style.display = 'block';
+                        document.getElementById('modal-subtitle').style.display = 'block';
+                        document.getElementById('form-success-message').style.display = 'none';
+                    }
+                    
+                    modalElement.style.display = "block";
+                });
+            }
+        }
+        
+        // Portfolio Card Click Handler
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                const img = card.querySelector('img');
+                const title = card.querySelector('h3').textContent; 
+                
+                modalImg.src = img.src; 
+                captionText.innerHTML = title; 
+                imageModal.style.display = "block";
+            });
+        });
+        
+        // Initialize Modals
+        setupModalListeners(contactModal, ctaBtn);
+        setupModalListeners(imageModal, null); // Portfolio modal is opened by cards
+        
+        // Mobile Navigation Toggle
         const hamburgerBtn = document.getElementById('hamburger-btn');
         const mobileNav = document.getElementById('mobile-nav-menu');
-        const closeBtn = document.getElementById('mobile-nav-close');
         
-        // Function to toggle the menu
         function toggleMenu() {
             mobileNav.classList.toggle('open');
         }
 
-        // Open menu
         hamburgerBtn.addEventListener('click', toggleMenu);
-
-        // Close menu
-        closeBtn.addEventListener('click', toggleMenu);
+        mobileNav.querySelector('.mobile-nav-close').addEventListener('click', toggleMenu);
         
-        // Close menu when a link is clicked
         const navLinks = mobileNav.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', toggleMenu);
